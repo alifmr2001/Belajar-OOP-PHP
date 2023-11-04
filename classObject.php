@@ -1,61 +1,61 @@
+<!-- Studi kasus saldo rekening -->
+<?php
+// membuat class 
+class BankAccount
+{
+    // Membaut property
+    public $accountNumber;
+    public $balance;
 
-    <?php
-    // membuat class 
-    class BankAccount
+    // Membuat method
+    public function deposit($amount)
     {
-        // Membaut property
-        public $accountNumber;
-        public $balance;
-
-        // Membuat method
-        public function deposit($amount)
-        {
-            if ($amount > 0) {
-                $this->balance += $amount;
-            }
-        }
-
-        public function withdraw($amount)
-        {
-            if ($amount <= $this->balance) {
-                $this->balance -= $amount;
-                return true;
-            }
-            return false;
+        if ($amount > 0) {
+            $this->balance += $amount;
         }
     }
 
-    // Membuat object baru dari class / instantation
-    $account = new BankAccount();
+    public function withdraw($amount)
+    {
+        if ($amount <= $this->balance) {
+            $this->balance -= $amount;
+            return true;
+        }
+        return false;
+    }
+}
 
-    // cara mengakses property
-    $account->accountNumber = 1;
-    $account->balance = 100;
+// Membuat object baru dari class / instantation
+$account = new BankAccount();
 
-    // Menyimpan nilai saldo sebelum deposit
-    $before_deposit = $account->balance;
+// cara mengakses property
+$account->accountNumber = 1;
+$account->balance = 100;
 
-    // Memanggil method deposit
-    $account->deposit(100);
+// Menyimpan nilai saldo sebelum deposit
+$before_deposit = $account->balance;
 
-    // Menyimpan nilai saldo setelah deposit
-    $after_deposit = $account->balance;
+// Memanggil method deposit
+$account->deposit(100);
 
-    // menampilkan nilai saldo sebelum dan sesudah deposit;
-    echo "Before deposit= " . $before_deposit . PHP_EOL;
-    echo "After deposit= " . $after_deposit . PHP_EOL;
+// Menyimpan nilai saldo setelah deposit
+$after_deposit = $account->balance;
 
-    $account->withdraw(50);
+// menampilkan nilai saldo sebelum dan sesudah deposit;
+echo "Before deposit= " . $before_deposit . PHP_EOL;
+echo "After deposit= " . $after_deposit . PHP_EOL;
 
-    // Menyimpan nilai saldo setelah withdraw
-    $after_witdraw = $account->balance;
+$account->withdraw(50);
 
-    // Menampilkan nilai setelah withdraw
-    echo "After withdraw= " . $after_witdraw;
+// Menyimpan nilai saldo setelah withdraw
+$after_witdraw = $account->balance;
 
-
-
-
+// Menampilkan nilai setelah withdraw
+echo "After withdraw= " . $after_witdraw;
 
 
-    ?>
+
+
+
+
+?>
