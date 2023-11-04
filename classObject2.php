@@ -41,7 +41,7 @@ $akun_A->transfer($akun_B, 500);
 
 // Menampilkan saldo akun A dan akun B
 echo "Akun A: " . $akun_A->saldo . PHP_EOL;
-echo "Akun B: " . $akun_B->saldo . PHP_EOL;
+echo "Akun : " . $akun_B->saldo . PHP_EOL;
 
 
 ?>
